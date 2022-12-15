@@ -1,0 +1,297 @@
+<app-nav></app-nav>
+<app-address></app-address>
+<mat-slide-toggle>Toggle me!</mat-slide-toggle>
+
+<!-- MatButtonModule -->
+
+<section>
+  <div class="example-label">Basic</div>
+  <div class="example-button-row">
+    <button mat-button>Basic</button>
+    <button mat-button color="primary">Primary</button>
+    <button mat-button color="accent">Accent</button>
+    <button mat-button color="warn">Warn</button>
+    <button mat-button disabled>Disabled</button>
+    <a mat-button href="https://www.google.com/" target="_blank">Link</a>
+  </div>
+</section>
+<mat-divider></mat-divider>
+<section>
+  <div class="example-label">Raised</div>
+  <div class="example-button-row">
+    <button mat-raised-button>Basic</button>
+    <button mat-raised-button color="primary">Primary</button>
+    <button mat-raised-button color="accent">Accent</button>
+    <button mat-raised-button color="warn">Warn</button>
+    <button mat-raised-button disabled>Disabled</button>
+    <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a>
+  </div>
+</section>
+<mat-divider></mat-divider>
+<section>
+  <div class="example-label">Stroked</div>
+  <div class="example-button-row">
+    <button mat-stroked-button>Basic</button>
+    <button mat-stroked-button color="primary">Primary</button>
+    <button mat-stroked-button color="accent">Accent</button>
+    <button mat-stroked-button color="warn">Warn</button>
+    <button mat-stroked-button disabled>Disabled</button>
+    <a mat-stroked-button href="https://www.google.com/" target="_blank">Link</a>
+  </div>
+</section>
+<mat-divider></mat-divider>
+<section>
+  <div class="example-label">Flat</div>
+  <div class="example-button-row">
+    <button mat-flat-button>Basic</button>
+    <button mat-flat-button color="primary">Primary</button>
+    <button mat-flat-button color="accent">Accent</button>
+    <button mat-flat-button color="warn">Warn</button>
+    <button mat-flat-button disabled>Disabled</button>
+    <a mat-flat-button href="https://www.google.com/" target="_blank">Link</a>
+  </div>
+</section>
+<mat-divider></mat-divider>
+<section>
+  <div class="example-label">Icon</div>
+  <div class="example-button-row">
+    <div class="example-flex-container">
+      <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+        <mat-icon>home</mat-icon>
+      </button>
+      <button mat-icon-button color="accent" aria-label="Example icon button with a menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+        <mat-icon>favorite</mat-icon>
+      </button>
+      <button mat-icon-button disabled aria-label="Example icon button with a open in new tab icon">
+        <mat-icon>open_in_new</mat-icon>
+      </button>
+    </div>
+  </div>
+</section>
+<mat-divider></mat-divider>
+<section>
+  <div class="example-label">FAB</div>
+  <div class="example-button-row">
+    <div class="example-flex-container">
+      <div class="example-button-container">
+        <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+      <div class="example-button-container">
+        <button mat-fab color="accent" aria-label="Example icon button with a bookmark icon">
+          <mat-icon>bookmark</mat-icon>
+        </button>
+      </div>
+      <div class="example-button-container">
+        <button mat-fab color="warn" aria-label="Example icon button with a home icon">
+          <mat-icon>home</mat-icon>
+        </button>
+      </div>
+      <div class="example-button-container">
+        <button mat-fab disabled aria-label="Example icon button with a heart icon">
+          <mat-icon>favorite</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+<mat-divider></mat-divider>
+<section>
+  <div class="example-label">Mini FAB</div>
+  <div class="example-button-row">
+    <div class="example-flex-container">
+      <div class="example-button-container">
+        <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+      <div class="example-button-container">
+        <button mat-mini-fab color="accent" aria-label="Example icon button with a plus one icon">
+          <mat-icon>plus_one</mat-icon>
+        </button>
+      </div>
+      <div class="example-button-container">
+        <button mat-mini-fab color="warn" aria-label="Example icon button with a filter list icon">
+          <mat-icon>filter_list</mat-icon>
+        </button>
+      </div>
+      <div class="example-button-container">
+        <button mat-mini-fab disabled aria-label="Example icon button with a home icon">
+          <mat-icon>home</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<h2>Card with diff media size</h2><br/>
+<!-- Cards with media area -->
+<section>
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title-group>
+      <mat-card-title>Shiba Inu</mat-card-title>
+      <mat-card-subtitle>Small</mat-card-subtitle>
+      <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+    </mat-card-title-group>
+  </mat-card-header>
+  <mat-card-content>
+    {{longText}}
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title-group>
+      <mat-card-title>Shiba Inu</mat-card-title>
+      <mat-card-subtitle>Medium</mat-card-subtitle>
+      <img mat-card-md-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+    </mat-card-title-group>
+  </mat-card-header>
+  <mat-card-content>
+    {{longText}}
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title-group>
+      <mat-card-title>Shiba Inu</mat-card-title>
+      <mat-card-subtitle>Large</mat-card-subtitle>
+      <img mat-card-lg-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+    </mat-card-title-group>
+  </mat-card-header>
+  <mat-card-content>
+    {{longText}}
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title-group>
+      <mat-card-title>Shiba Inu</mat-card-title>
+      <mat-card-subtitle>Extra large</mat-card-subtitle>
+      <img mat-card-xl-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+    </mat-card-title-group>
+  </mat-card-header>
+  <mat-card-content>
+    {{longText}}
+  </mat-card-content>
+</mat-card>
+</section>
+
+<section>
+  <h2> card with avatar </h2>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Shiba Inu</mat-card-title>
+      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>
+        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+        bred for hunting.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+</section>
+
+<section>
+  <h2>Badge Overview</h2>
+  <div matBadge="4" matBadgeOverlap="false" class="demo-section">Text with a badge</div>
+
+  <div matBadge="1" matBadgeSize="large" class="demo-section">Text with large badge</div>
+
+<div class="demo-section">
+  Button with a badge on the left
+  <button mat-raised-button color="primary"
+      matBadge="8" matBadgePosition="before" matBadgeColor="accent">
+    Action
+  </button>
+</div>
+
+<div class="demo-section">
+    Button toggles badge visibility
+    <button mat-raised-button matBadge="7" [matBadgeHidden]="hidden" (click)="toggleBadgeVisibility()">
+        Hide
+    </button>
+  </div>
+
+<div class="demo-section">
+  Icon with a badge
+  <mat-icon matBadge="15" matBadgeColor="warn">home</mat-icon>
+    <!-- Include text description of the icon's meaning for screen-readers -->
+    <span class="cdk-visually-hidden">
+      Example with a home icon with overlaid badge showing the number 15
+    </span>
+</div>
+
+</section>
+
+<section class="example-grid">
+  <h2> Grid List </h2>
+  <mat-grid-list cols="4" rowHeight="100px">
+    <mat-grid-tile
+        *ngFor="let tile of tiles"
+        [colspan]="tile.cols"
+        [rowspan]="tile.rows"
+        [style.background]="tile.color">
+      {{tile.text}}
+    </mat-grid-tile>
+  </mat-grid-list>
+</section>
+
+<section>
+  <h2>Stepper</h2>
+  <button mat-raised-button (click)="isEditable = !isEditable">
+    {{!isEditable ? 'Enable edit mode' : 'Disable edit mode'}}
+  </button>
+  
+  <mat-stepper linear #stepper>
+    <mat-step>
+      <ng-template matStepLabel>Fill out your name</ng-template>
+      <p>fill out your name: </p>
+    </mat-step>
+
+    <mat-step>
+      <ng-template matStepLabel>Fill out your address</ng-template>
+      <p>fill out your address: </p>
+    </mat-step>
+
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <p>You are now done.</p>
+    </mat-step>
+  </mat-stepper>
+  
+</section>
+
+<section>
+  <h2>Snackbar</h2>
+  <mat-form-field appearance="fill">
+    <mat-label>Message</mat-label>
+    <input matInput value="Disco party!" #message>
+  </mat-form-field>
+  
+  <mat-form-field appearance="fill">
+    <mat-label>Action</mat-label>
+    <input matInput value="Dance" #action>
+  </mat-form-field>
+  
+  <button mat-stroked-button (click)="openSnackBar(message.value, action.value)">Show snack-bar</button>
+  
+</section>

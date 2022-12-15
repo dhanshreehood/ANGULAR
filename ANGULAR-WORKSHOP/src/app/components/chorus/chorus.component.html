@@ -1,0 +1,54 @@
+<div class="container d-flex flex-wrap align-items-center p-3" align="center
+">
+<div *ngIf="chorus.length!=0 ; else block2" class="div1">
+    <h4>Chorus</h4>
+<ul *ngFor="let c of chorus; let i=index"><!--index will read the-->
+<li>
+    {{i+1}} {{c}}</li>
+</ul>
+</div>
+
+<div class="vl"></div>
+
+<div>
+<div *ngIf="finishedChorus.length!=0 ; else block2" class="div2">
+    <h4>Done Chorus</h4>
+<ul *ngFor="let fc of finishedChorus; let i=index"><!--index will read the-->
+<li>
+    {{i+1}} {{fc}}</li>
+</ul>
+</div><br/>
+<ng-template #block2>
+    <h4 id="chorus_p2">Record is Empty!</h4>
+</ng-template>
+</div>
+
+<div class="vl"></div>
+
+<div class="div3">
+<div *ngIf="finishedChorus.length < chorus.length; else block1">
+    <p id="chorus_p">Work harder!</p>
+  </div>
+  <ng-template #block1>
+    <h4 id="chorus_p2">You are going good!</h4>
+  </ng-template>
+
+<div *ngIf="chorus.length==0 || finishedChorus.length>=3; else block3">
+    <img [src]='targetImage'>
+</div>
+<ng-template #block3>
+    <p id="chorus_p">No allowance yet!</p>
+</ng-template>
+  
+<div *ngIf="chorus.length==0 && finishedChorus.length>=4; else block4">
+<h1>Ice-cream Treat!!!</h1>
+</div>
+<ng-template #block4>    
+    <h2 style="color: green;">To earn an Ice-cream treat:</h2>
+    <ul>
+    <li><p style="color: green;">Chores list must be empty</p></li>
+    <li><p style="color: green;">Done list must have 4 items or more than that.</p></li>
+</ul>
+</ng-template>
+</div>
+</div>

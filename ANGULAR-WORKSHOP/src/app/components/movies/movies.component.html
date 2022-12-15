@@ -1,0 +1,24 @@
+<form #myForm="ngForm" novalidate class="col-6">
+<input type="text" placeholder="search by name" [(ngModel)]="searchBy"/>
+<input type="date" placeholder="search by Date" [(ngModel)]="searchDate">
+</form>
+
+<div class="container d-flex flex-wrap align-items-center" *ngIf="movies.length!=0 else block1">
+    <div *ngFor="let movie of movies | search: searchBy">
+    <div class="card" style="width: 18rem;">
+
+        <img class="card-img-top" [src]="movie.poster" (click)="getMovie(movie.movieId)" alt="Card image cap" height="20%" width="20%">
+        <div class="card-body">
+          <h5 class="card-title">{{movie.title}}</h5>
+          <p class="card-text">Category: {{movie.movieCategory}}</p>
+          <p class="card-text">Director name: {{movie.directorName}}</p>
+          <p class="card-text">Release Date: {{movie.releaseDate | date: "MM/dd/yyyy"}}</p>
+          <a href="#" class="btn btn-primary">Movie Details</a>
+        </div>
+      </div>
+    </div>
+    </div>
+    
+    <ng-template #block1>
+        No record Found....
+    </ng-template>

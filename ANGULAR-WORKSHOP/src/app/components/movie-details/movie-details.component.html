@@ -1,0 +1,18 @@
+
+<div class="container d-flex flex-wrap align-items-center" *ngIf="movie.length!=0 else blockMovie">
+        <img class="card-img-top" [src]="movie.poster" (click)="getMovieDetail(movie.movieId)" alt="Card image cap" height="20%" width="20%">
+        <div class="card-body">
+          <h5 class="card-title">{{movie.title}}</h5>
+          <p class="card-text">Movie ID: {{movie.movieId}}</p>
+          <p class="card-text">Category: {{movie.movieCategory}}</p>
+          <p class="card-text">Director name: {{movie.directorName}}</p>
+          <p class="card-text">Release date: {{movie.releaseDate | date: "MM/dd/yyyy"}}</p>
+
+          <a href="#" class="btn btn-primary">Add to cart</a>
+        </div>
+      </div>
+    
+    <ng-template #blockMovie>
+        No record Found....
+    </ng-template>
+    

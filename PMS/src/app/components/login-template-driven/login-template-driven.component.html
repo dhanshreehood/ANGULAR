@@ -1,0 +1,19 @@
+<!-- ex-Template Form -->
+    <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+    {{user | json}}<br/>
+    
+    <!-- Two way data binding we are performing here -->
+    <input type="text" placeholder="username" name="username" [(ngModel)]="user.userName" required #userName="ngModel"/><br/>
+    <!-- required for validation -->
+    <div [hidden]="userName.invalid || userName.pristine" class="alert alert-danger">
+        name is required..
+    </div>
+
+    <input type="password" placeholder="password" name="password" [(ngModel)]="user.passWord" required #passWord="ngModel"/><br/>
+    <div [hidden]="passWord.invalid || passWord.pristine" class="alert alert-danger">
+        verify your password...
+    </div>
+
+    <!-- property binding to disable login button, if form is invalid -->
+    <input type="submit" value="Login" [disabled]="!loginForm.form.valid">
+</form>

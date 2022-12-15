@@ -1,0 +1,8 @@
+{{msg}}
+<form [formGroup]="addForm" (ngSubmit)="addProduct(product)">
+
+    <input type="text" placeholder="Product name" name="date" formControlName="productName"/><br/>
+    <input type="number" placeholder="Product Price" name="name" formControlName="price"/>
+    <input type="submit" value="Add">
+
+</form>

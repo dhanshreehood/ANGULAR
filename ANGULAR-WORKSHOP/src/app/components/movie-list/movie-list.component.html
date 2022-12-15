@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title" *ngIf="movies.length != 0; else mblock">Movies to Watch</h5>
+      <table>
+        <tr>
+          <th>Movies List</th>
+        </tr>
+      <tr *ngFor="let movie of movies; let i = index">
+        <td (click)="addtowatched(i)">{{i+1}} {{movie}}</td>
+      </tr>
+    </table>
+    </div>
+  </div>
+</div>
+
+<hr/>
+<div class="row" *ngIf="watchedMovies.length != 0; else mblock">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Watched Movies</h5>
+      <table>
+        <tr>
+          <th>Watched Movies</th>
+        </tr>
+      <tr *ngFor="let wm of watchedMovies; let i = index">
+        <td>{{i+1}} {{wm}}</td>
+      </tr>
+    </table>
+    </div>
+  </div>
+</div>
+<ng-template #mblock><p>Movies list is empty</p></ng-template>

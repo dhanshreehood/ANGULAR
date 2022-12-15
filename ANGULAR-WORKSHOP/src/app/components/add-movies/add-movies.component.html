@@ -1,0 +1,26 @@
+<!-- ex-Template Form -->
+<form #addMovieForm="ngForm" [FormFroup]="addMovieForm" (ngSubmit)="addMovie()">
+    
+    <!-- Two way data binding we are performing here -->
+    <!-- <input type="text" placeholder="username" name="username" [(ngModel)]="user.userName" required #userName="ngModel"/><br/>
+    <!-- required for validation -->
+    <!--<div [hidden]="userName.invalid || userName.pristine" class="alert alert-danger">
+        name is required..
+    </div> -->
+
+    <input type="text" placeholder="title" name="title" formControlName="title"/><br/>
+     <div [hidden]="title.invalid || title.pristine" class="alert alert-danger">
+        title is required..
+    </div>
+
+    <input type="text" placeholder="date of Release" name="date" formControlName="date"/><br/>
+    <input type="text" placeholder="Poster" name="poster" formControlName="poster"/><br/>
+    <input type="text" placeholder="Summary" name="summary" formControlName="summary"/><br/>
+    <input type="text" placeholder="Director name" name="director" formControlName="director"/><br/>
+    <input type="text" placeholder="Rating: to be displayed in the form of stars" name="rating" formControlName="rating"/><br/>
+    <input type="text" placeholder="Genre" name="genre" formControlName="genre"/><br/>
+    <input type="text" placeholder="Box-office collection" name="boxOffice" formControlName="boxOffice"/><br/>
+
+    <!-- property binding to disable login button, if form is invalid -->
+    <input type="submit" value="Add" [disabled]="!addMovieForm.form.valid">
+</form>

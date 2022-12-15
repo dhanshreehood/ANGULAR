@@ -1,0 +1,23 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-lg-12 col-md-12 sol-sm-12">
+        <form [formGroup]="editProductForm" (ngSubmit)="editProduct()">
+
+            <div class="form-group">
+                <label>Product ID: </label>
+                <input  type="number" class="form-control" name="productId" formControlName="productId" [(ngModel)]="product.productId"
+                aria-label="Disabled input example" [disabled]="true" readonly>
+              </div>
+
+              <label>Name</label>
+              <input type="text" class="form-control" name="productName" formControlName="productName" [(ngModel)]="product.productName"/>
+
+              <label>Price</label>
+              <input type="number" class="form-control" name="price" formControlName="price" [(ngModel)]="product.price"/>
+ 
+          <button type="submit" class="btn btn-primary">Submit</button>
+  
+        </form>
+      </div>
+    </div>
+  </div>

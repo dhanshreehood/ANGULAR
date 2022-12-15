@@ -1,0 +1,19 @@
+<!-- ex-Template Form -->
+<form [formGroup]="registerForm" (ngSubmit)="register()">
+    
+    <!-- Two way data binding we are performing here by using formControlName= and refering to the form control of ts file -->
+    <input type="text" placeholder="username" name="username" formControlName="name"/><br/>
+    <div class="error text-danger" *ngIf="registerForm.controls['name'].hasError('required') && registerForm.controls['name'].touched">
+        name is required...
+    </div>
+
+    <!-- check multiplle validators... -->
+    <div class="error text-danger" *ngIf="registerForm.controls['minlength'].hasError('minlength') && registerForm.controls['minlength'].touched">
+        Min-Length of name must be 3 or greater than that...
+    </div>
+    <input type="email" placeholder="email" name="email" formControlName="email"/><br/>
+
+    <input type="password" placeholder="password" name="password" formControlName="password"/><br/>
+
+    <input type="submit" value="Register">
+</form>

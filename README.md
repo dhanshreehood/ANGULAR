@@ -1,2 +1,2 @@
-# ANGULAR
-ANGULAR TRAINING
+# Angular-Training
+Angular-Training files

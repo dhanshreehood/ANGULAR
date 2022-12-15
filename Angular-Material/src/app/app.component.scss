@@ -1,0 +1,30 @@
+.example-card {
+    max-width: 400px;
+    margin-bottom: 8px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+
+//   :host {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: flex-start;
+//   }
+  
+  .demo-section + .demo-section {
+    margin-top: 16px;
+  }
+  mat-grid-list{
+    max-width: 100%;
+  }
+
+  .mat-stepper-horizontal {
+    margin-top: 8px;
+  }
+  
+  .mat-mdc-form-field {
+    margin-top: 16px;
+  }

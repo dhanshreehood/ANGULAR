@@ -1,0 +1,21 @@
+<input type="text" placeholder="search" [(ngModel)]="searchBy"/>
+{{searchBy}}
+<div class="container d-flex flex-wrap align-items-center" *ngIf="products.length!=0 else blockProduct">
+<div *ngFor="let product of products | search: searchBy"><!--adding search pipe-->
+<div class="card" style="width: 18rem;">
+  <!--adding event binding to fetch product info page after clicking on the product card-->
+    <img class="card-img-top" [src]="product.image" (click)="getProduct(product.productId)" alt="Card image cap" height="20%" width="20%">
+    <div class="card-body">
+      <h5 class="card-title">{{product.productName}}</h5>
+      <p class="card-text">Product ID: {{product.productId}}</p>
+      <p class="card-text">Price: {{product.price | currency: 'INR'}}</p>
+      
+      <a href="#" class="btn btn-primary" routerLink="/edit/{{product.productId}}">Edit</a>
+    </div>
+  </div>
+</div>
+</div>
+
+<ng-template #blockProduct>
+    No record Found....
+</ng-template>

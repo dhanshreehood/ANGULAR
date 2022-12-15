@@ -1,0 +1,19 @@
+
+<div class="container d-flex flex-wrap align-items-center" *ngIf="product.length!=0 else blockProduct">
+    <div class="card" style="width: 18rem;">
+      <!--adding event binding to fetch product info page after clicking on the product card-->
+        <img class="card-img-top" [src]="product.image" alt="Card image cap" height="20%" width="20%">
+        <div class="card-body">
+          <h5 class="card-title">{{product.productName}}</h5>
+          <p class="card-text">Product ID: {{product.productId}}</p>
+          <p class="card-text">Price: {{product.price | currency: 'INR'}}</p>
+          
+          <a href="#" class="btn btn-primary" [routerLink]="['/getProductById/', product.productId]">Add to cart</a>
+        </div>
+      </div>
+    </div>
+    
+    <ng-template #blockProduct>
+        No record Found....
+    </ng-template>
+    
